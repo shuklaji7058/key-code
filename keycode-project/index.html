@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Key Code Analyzer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Interactive Key Code Analyzer</h1>
+      <div class="tabs">
+        <button class="tab-button active" data-tab="keyInfo">Key Info</button>
+        <button class="tab-button" data-tab="keyCodeTable">
+          Key Code Table
+        </button>
+        <button class="tab-button" data-tab="gameMode">Game Mode</button>
+      </div>
+
+      <div id="keyInfo" class="tab-content active">
+        <div id="insert" class="key-info"></div>
+        <p class="instruction">Press any key to see its information</p>
+      </div>
+
+      <div id="keyCodeTable" class="tab-content">
+        <input type="text" id="tableSearch" placeholder="Search for a key..." />
+        <div class="table-container">
+          <table id="codeTable">
+            <thead>
+              <tr>
+                <th>Key</th>
+                <th>Code</th>
+                <th>Key Code</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div id="gameMode" class="tab-content">
+        <h2>Key Press Game</h2>
+        <p>Press the highlighted key before time runs out!</p>
+        <div id="gameKey" class="game-key">Press Start</div>
+        <div id="gameScore">Score: 0</div>
+        <select id="gameDifficulty">
+          <option value="very_easy">Very Easy</option>
+          <option value="easy">Easy</option>
+          <option value="normal" selected>Normal</option>
+          <option value="hard">Hard</option>
+        </select>
+        <button id="startGame">Start Game</button>
+        <button id="resetLevel" style="display: none">Reset Level</button>
+      </div>
+      <div id="gameMode" class="tab-content">
+        <h2>Key Press Game</h2>
+        <p>Press the highlighted key as fast as you can!</p>
+        <div id="gameKey" class="game-key"></div>
+        <div id="gameScore">Score: 0</div>
+        <button id="startGame">Start Game</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
